@@ -16,6 +16,6 @@ public interface UserService {
 	
 	public void deleteUser(String uid) throws Exception;
 	
-	public boolean loginCheck(UserVO userVO) throws Exception;
+	public UserVO loginCheck(UserVO userVO) throws Exception;
 	
 }

@@ -12,6 +12,7 @@
 		<org.springframework-version>5.1.4.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.9.2</org.aspectj-version>
 		<org.slf4j-version>1.7.25</org.slf4j-version>
+		
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -214,10 +215,9 @@
 		    <version>3.0.8</version>
 		</dependency>
 
+	
 
-
-     
-	</dependencies>
+</dependencies>
     <build>
         <plugins>
             <plugin>

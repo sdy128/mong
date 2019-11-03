@@ -17,12 +17,21 @@
 		<label for="pwd" class="sr-only">User Password</label>
 	</div>
 	
+	
+
+
+	
 	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 	
 	<span style="font-size:11pt;"><a href="#" onclick="fn_btnSignupClick()">
 	Sign up</a></span>
 	
 	<script>
+	
+	
+	
+	
+	
 		function fn_btnSignupClick(){
 			location.href ="${pageContext.request.contextPath}/login/signupForm";
         	}  

@@ -55,9 +55,9 @@
 		WHERE UID = #{uid}
 	</delete>
 	
-	<select id = "loginCheck" parameterType="com.mongblog.web.user.model.UserVO" resultType="String">
+	<select id = "loginCheck" parameterType="com.mongblog.web.user.model.UserVO" resultType="com.mongblog.web.user.model.UserVO">
 	
-		SELECT NAME FROM TBL_USER
+		SELECT * FROM TBL_USER
 		WHERE UID = #{uid} AND PWD = #{pwd}
 	
 	</select>

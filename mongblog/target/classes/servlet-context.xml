@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
@@ -43,4 +44,15 @@
 		</beans:property>
 	</beans:bean>
 	
+	<!-- 인터셉터 객체 생성 -->
+<beans:bean id="AuthLoginInterceptor" class="com.mongblog.web.login.AuthLoginInterceptor">
+</beans:bean>
+<!-- Interceptor 설정 -->
+<interceptors>
+    <interceptor>
+        <mvc:mapping path="/board/*"/>         
+        <mvc:exclude-mapping path="/resources/**"/>
+        <beans:ref bean="AuthLoginInterceptor"/>
+    </interceptor>
+</interceptors>
 </beans:beans>

@@ -16,5 +16,5 @@ public List<UserVO> getUserList() throws Exception;
 	
 	public int deleteUser(String uid) throws Exception;
 	
-	public boolean loginCheck(UserVO userVO) throws Exception;
+	public UserVO loginCheck(UserVO userVO) throws Exception;
 }

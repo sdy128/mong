@@ -41,8 +41,8 @@ public class UserDAOImpl implements UserDAO {
 	}
 
 	@Override
-	public boolean loginCheck(UserVO userVO) throws Exception {
-		String name = sqlSession.selectOne("com.mongblog.web.user.userMapper.loginCheck", userVO);
-		return(name == null) ? false :true;
+	public UserVO loginCheck(UserVO userVO) throws Exception {
+		return sqlSession.selectOne("com.mongblog.web.user.userMapper.loginCheck", userVO);
+		
 	}
 }
