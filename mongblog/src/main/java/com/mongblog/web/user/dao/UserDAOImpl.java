@@ -39,4 +39,10 @@ public class UserDAOImpl implements UserDAO {
 	public int deleteUser(String uid) throws Exception {
 		return sqlSession.delete("com.mongblog.web.user.userMapper.deleteUser", uid);
 	}
+
+	@Override
+	public boolean loginCheck(UserVO userVO) throws Exception {
+		String name = sqlSession.selectOne("com.mongblog.web.user.userMapper.loginCheck", userVO);
+		return(name == null) ? false :true;
+	}
 }

@@ -54,4 +54,11 @@
 		DELETE FROM TBL_USER
 		WHERE UID = #{uid}
 	</delete>
+	
+	<select id = "loginCheck" parameterType="com.mongblog.web.user.model.UserVO" resultType="String">
+	
+		SELECT NAME FROM TBL_USER
+		WHERE UID = #{uid} AND PWD = #{pwd}
+	
+	</select>
 </mapper>

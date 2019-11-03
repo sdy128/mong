@@ -2,7 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <!-- login form {s} -->
-<form:form class="form-signin" name="form" id="form" role="form" modelAttribute="userVO" method="post" action="${pageContext.request.contextPath}/board/saveBoard">
+<form:form class="form-signin" name="form" id="form" role="form" modelAttribute="userVO" method="post" action="${pageContext.request.contextPath}/login/loginCheck">
 	<div class="text-center mb-4">
 		<h1 class="h3 mb-3 font-weight-normal">MONGMONG.COM</h1>
 	</div>
@@ -25,7 +25,9 @@
 	<script>
 		function fn_btnSignupClick(){
 			location.href ="${pageContext.request.contextPath}/login/signupForm";
-        	}    
+        	}  
+		
+		
 	</script>
 	
 	<p class="mt-5 mb-3 text-muted text-center">© 2019. MONGMONG. All rights reserved.</p>
